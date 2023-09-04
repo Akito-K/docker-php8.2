@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  php-web60020:
+    image: niclab/php8.2
+    working_dir: /var/www
+    ports:
+      - 60020:80
+    volumes:
+      - ./root:/var/www
+      - ./docker/php-web/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/php-web/custom-vhost.conf:/etc/apache2/sites-available/000-default.conf
