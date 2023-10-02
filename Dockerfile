@@ -51,3 +51,8 @@ RUN pecl install xdebug \
 
 # リライトモジュール
 RUN a2enmod rewrite
+
+# mysqldump
+RUN apt install -y \
+  default-mysql-client-core \
+  default-mysql-client \
